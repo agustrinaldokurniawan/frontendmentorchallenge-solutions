@@ -189,19 +189,12 @@ button {
     }
   }
 
-  @keyframes fadeInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   body {
     height: 100vh;
-    padding: 0px 50px;
+  }
+
+  main {
+    overflow: hidden;
   }
 
   .intro-wrapper {
@@ -211,6 +204,16 @@ button {
     }
     .title {
       width: 500px;
+    }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
     }
   }
 
