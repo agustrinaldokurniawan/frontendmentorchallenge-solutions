@@ -148,7 +148,7 @@ body {
 
 @media (max-width: 900px) {
   .header {
-    height: 100px;
+    height: 100px !important;
     display: flex;
     align-items: center;
     width: 100%;
@@ -168,7 +168,7 @@ body {
       linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .cta-title {
@@ -250,7 +250,7 @@ body {
     }
 
     .cta-wrapper {
-      flex: 2;
+      flex: 3;
       background-image: url("images/bg-pattern-desktop.svg"),
         linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
       background-size: 100% 100%;
@@ -277,7 +277,7 @@ body {
     }
 
     .display-image {
-      flex: 1;
+      flex: 2;
       background-image: url("images/hero-desktop.jpg");
       background-size: cover;
       animation: opacityImage 2s both;
