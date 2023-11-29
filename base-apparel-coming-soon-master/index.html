@@ -22,23 +22,30 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <!-- styling with less -->
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
   </head>
   <body>
-    <main>
-      <div>
-        <div>
-          <img src="images/logo.svg" alt="Base Apparel" />
-          <div>
-            <h1>We're</h1>
-            <h1>coming soon</h1>
-            <p>
+    <div class="header"><img src="images/logo.svg" alt="Base Apparel" /></div>
+    <main class="section-wrapper">
+      <div class="cta-wrapper">
+        <div class="content-cta-wrapper">
+          <div class="header-cta-wrapper">
+            <img src="images/logo.svg" alt="Base Apparel" />
+          </div>
+          <div class="body-cta-wrapper">
+            <h1 class="cta-title">
+              <span>We're</span>
+              <span>coming soon</span>
+            </h1>
+            <p class="cta-caption">
               Hello fellow shoppers! We're currently building our new fashion
               store. Add your email below to stay up-to-date with announcements
               and our launch deals.
             </p>
-            <div id="input-container">
-              <div>
+            <div class="input-wrapper">
+              <div class="input">
                 <input placeholder="Email Address" name="email" />
                 <button onclick="onSubmit()">
                   <img src="images/icon-arrow.svg" alt="Submit" />
@@ -48,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div></div>
+      <div class="display-image"></div>
     </main>
 
     <footer style="display: none">

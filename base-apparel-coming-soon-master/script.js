@@ -1,5 +1,5 @@
-const emailInputContainerEl = document.getElementById("input-container");
-const emailInputEl = emailInputContainerEl.children[0].children[0];
+const emailInputContainerEl = document.getElementsByClassName("input-wrapper")[0];
+const emailInputEl = document.getElementsByClassName('input')[0].children[0];
 
 emailInputEl.addEventListener("input", (e) => {
   if (emailInputContainerEl.lastChild.nodeName === "P") {
@@ -21,6 +21,7 @@ const onSubmit = () => {
 
     const errorIcon = document.createElement("img");
     errorIcon.src = "images/icon-error.svg";
+    errorIcon.classList.add('error-icon')
     emailInputEl.parentNode.insertBefore(errorIcon, emailInputEl.nextSibling);
   }
 };
