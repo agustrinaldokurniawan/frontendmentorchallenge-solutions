@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ['"Work Sans"', "sans-serif"],
+          },
+          extend: {
+            colors: {
+              white: "hsl(0, 0%, 100%)",
+              lightPink: "hsl(275, 100%, 97%)",
+              grayishPink: "hsl(292, 16%, 49%)",
+              darkPurple: "hsl(292, 42%, 14%)",
+            },
+            keyframes: {
+              scaleYCard: {
+                "0%": { transform: "scaleY(.1)" },
+                "100%": { transform: "scaleY(1)" },
+              },
+              displayContent: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+            },
+            animation: {
+              scaleYCard: "scaleYCard 1s ease-in",
+              displayContent: "displayContent 1s both .5s",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="flex justify-center items-center h-screen bg-[url('../faq-accordion-main/assets/images/background-pattern-desktop.svg')] bg-no-repeat bg-lightPink bg-[length:auto_300px] lg:bg-[length:100%]"
+  >
+    <div
+      class="flex flex-col max-w-[600px] bg-white p-10 m-10 rounded-lg gap-5 animate-[scaleYCard_1s_ease-in] max-h-[600px] overflow-auto"
+    >
+      <div
+        class="flex items-center gap-5 mb-5 animate-[displayContent_1s_both_.5s]"
+      >
+        <img
+          src="../faq-accordion-main/assets/images/icon-star.svg"
+          alt="faqs"
+          class="w-7"
+        />
+        <h1 class="text-4xl font-bold text-darkPurple">FAQs</h1>
+      </div>
+      <div
+        class="flex flex-col gap-8 list-faqs animate-[displayContent_1s_both_.5s]"
+      ></div>
+    </div>
+
+    <div class="attribution hidden">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="../faq-accordion-main/scripts.js"></script>
+  </body>
+</html>
